@@ -6,7 +6,7 @@
     //
 
 import SwiftUI
-import Combine
+
 struct ContentView: View {
     @State var alertMessage = ""
     @State var name = "Name"
@@ -35,8 +35,6 @@ struct ContentView: View {
         .alert(isPresented: $showAlert) {
             Alert(title: Text("Error"), message: Text(alertMessage), dismissButton: .default(Text("Got it!")))
         }
-        
-        
     }
     func triggerAlert (_ message: Int){
         
@@ -68,5 +66,4 @@ struct ContentView: View {
             print(error)
         }
     }
-   
 }
