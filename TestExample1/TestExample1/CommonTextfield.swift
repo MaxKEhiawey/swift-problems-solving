@@ -7,7 +7,6 @@
 
 import SwiftUI
 
-
 struct CommonTextField: View {
     @Binding var placeholder: String
     @Binding var value: String
