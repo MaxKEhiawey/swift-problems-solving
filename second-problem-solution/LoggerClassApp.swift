@@ -7,21 +7,23 @@
 
 import Foundation
 
-class Logger {
+public class Logger {
     
     static let shared = Logger(environment: .debugging)
     
-    private var environment: Environment = .debugging
+    var environment: Environment = .debugging
     
-    private var dateFormat: String
+    var logMessage = ""
     
-    private var userID: String
+    var dateFormat: String
     
-    private var session: String
+    var userID: String
     
-    private var tags: [String]
+    var session: String
     
-    private init(environment: Environment, dateFormat: String = "yyyy-MM-dd HH:mm:ss"){
+    var tags: [String]
+    
+    init(environment: Environment, dateFormat: String = "yyyy-MM-dd HH:mm:ss"){
         
         self.environment = environment
         
@@ -36,7 +38,7 @@ class Logger {
     
     func log(_ message: String, severity: Severity = .veryLow) {
         
-        var logMessage = "[\(userID)] :[\(severity)]:[\(message)]"
+        logMessage = "[\(userID)] :[\(severity)]:[\(message)]"
         
         if !session.isEmpty {
             logMessage += " [\(session)]"
@@ -52,8 +54,8 @@ class Logger {
                 debugPrint(logMessage)
                 break
             case .production:
-                    // TODO:  log this to file instead of printing
-                writeLogToFile(logMessage, fileName: "\(userID)-logMessages.txt")
+            // TODO:  log this to file instead of printing
+            writeLogToFile(logMessage, fileName: "\(userID)-logMessages.txt")
                 break
             case .staging:
                 print(logMessage )
@@ -73,7 +75,7 @@ class Logger {
         log(message, severity: .moderate)
     }
     
-    func loe(_ message: String){
+    func low(_ message: String){
         log(message, severity: .low)
     }
     
@@ -110,13 +112,7 @@ class Logger {
     
     func getUserID(){
         
-        let userId = userDefaults.value(forKey: "userID")
-        
-        self.userID = userId as! String
-    }
-    
-    func setDateFormat(dateFormat: String) {
-        self.dateFormat = dateFormat
+        self.userID =  "Max"
     }
     
     func setEnvironment(environment: Environment) {
@@ -164,18 +160,9 @@ class Logger {
     }
     
         // MARK: Firebase
-    private func pushLogToFirebase(logString: String) {
+//    private func pushLogToFirebase(logString: String) {
             // Use Firebase SDK to authenticate with Firebase and upload the log string to a designated storage location
-    }
-    
-    enum Severity {
-        case veryHigh
-        case high
-        case moderate
-        case low
-        case veryLow
-    }
-    
+//    }
     enum Environment {
         case debugging
         case staging
@@ -183,3 +170,10 @@ class Logger {
     }
 }
 
+enum Severity {
+    case veryHigh
+    case high
+    case moderate
+    case low
+    case veryLow
+}

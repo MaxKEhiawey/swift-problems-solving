@@ -16,6 +16,7 @@
 		9CD58BF429363737006ABC7A /* second_problem_solutionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CD58BF329363737006ABC7A /* second_problem_solutionTests.swift */; };
 		9CD58BFE29363737006ABC7A /* second_problem_solutionUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CD58BFD29363737006ABC7A /* second_problem_solutionUITests.swift */; };
 		9CD58C0029363737006ABC7A /* second_problem_solutionUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CD58BFF29363737006ABC7A /* second_problem_solutionUITestsLaunchTests.swift */; };
+		9CEE19F62950B4AF002AD2B3 /* LoggerClassApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C67237F293E4F66000AD2F1 /* LoggerClassApp.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -274,6 +275,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9CEE19F62950B4AF002AD2B3 /* LoggerClassApp.swift in Sources */,
 				9CD58BF429363737006ABC7A /* second_problem_solutionTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct ContentView: View {
+    let userDefaults = UserDefaultsManager.shared
     
     var body: some View {
         VStack {

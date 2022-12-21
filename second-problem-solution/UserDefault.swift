@@ -23,4 +23,4 @@ class UserDefaultsManager {
         return defaults.value(forKey: key)
     }
 }
-let userDefaults = UserDefaultsManager.shared
+
