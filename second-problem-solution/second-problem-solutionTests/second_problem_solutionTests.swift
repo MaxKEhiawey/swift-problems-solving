@@ -12,158 +12,46 @@ final class second_problem_solutionTests: XCTestCase {
 
     let logger = Logger(environment: .debugging)
     
-    // test veryHigh function
-    func testVeryHigh(){
-        // Given
-        let message = "Test Log"
-        
-        let severity: Severity = .veryHigh
-        
-        // When
-        var assertion = "[\(logger.userID)] :[\(severity)]:[\(message)]"
-        
-        if !logger.session.isEmpty {
-            
-            assertion += " [\(logger.session)]"
-        }
-        
-        if !logger.tags.isEmpty {
-            
-            assertion += " [\(logger.tags.joined(separator: ","))]"
-        }
-        // Then
-        logger.veryHigh(message)
-        XCTAssertEqual(logger.logMessage, assertion)
-    }
-    
-    // test high function
-    func testHigh(){
-            // Given
-        let message = "Test Log"
-        
-        let severity: Severity = .high
-        
-            // When
-        var assertion = "[\(logger.userID)] :[\(severity)]:[\(message)]"
-        
-        if !logger.session.isEmpty {
-            
-            assertion += " [\(logger.session)]"
-        }
-        
-        if !logger.tags.isEmpty {
-            
-            assertion += " [\(logger.tags.joined(separator: ","))]"
-        }
-            // Then
-        logger.high(message)
-        
-        XCTAssertEqual(logger.logMessage, assertion)
-    }
-    
-    // test moderate function
-    func testModerate(){
-            // Given
-        let message = "Test Log"
-        
-        let severity: Severity = .moderate
-        
-            // When
-        var assertion = "[\(logger.userID)] :[\(severity)]:[\(message)]"
-        
-        if !logger.session.isEmpty {
-            
-            assertion += " [\(logger.session)]"
-        }
-        
-        if !logger.tags.isEmpty {
-            
-            assertion += " [\(logger.tags.joined(separator: ","))]"
-        }
-            // Then
-        logger.moderate(message)
-        
-        XCTAssertEqual(logger.logMessage, assertion)
-    }
-    
-    // test low function
-    func testLow(){
-            // Given
-        let message = "Test Log"
-        
-        let severity: Severity = .low
-        
-            // When
-        var assertion = "[\(logger.userID)] :[\(severity)]:[\(message)]"
-        
-        if !logger.session.isEmpty {
-            
-            assertion += " [\(logger.session)]"
-        }
-        
-        if !logger.tags.isEmpty {
-            
-            assertion += " [\(logger.tags.joined(separator: ","))]"
-        }
-            // Then
-        logger.low(message)
-        
-        XCTAssertEqual(logger.logMessage, assertion)
-    }
-    
-    // test veryLow function
-    func testveryLow(){
-            // Given
-        let message = "Test Log"
-        
-        let severity: Severity = .veryLow
-        
-            // When
-        var assertion = "[\(logger.userID)] :[\(severity)]:[\(message)]"
-        
-        if !logger.session.isEmpty {
-            
-            assertion += " [\(logger.session)]"
-        }
-        
-        if !logger.tags.isEmpty {
-            
-            assertion += " [\(logger.tags.joined(separator: ","))]"
-        }
-            // Then
-        logger.veryLow(message)
-        
-        XCTAssertEqual(logger.logMessage, assertion)
-    }
-    
     // test log function
     func testLog(){
         // Given
         let message = "Test Log"
-        
-        let severity: Severity = .low
-        
+  
         //When
         
-        var assertion = "[\(logger.userID)] :[\(severity)]:[\(message)]"
+        // test veryHigh function
+        logger.log(message, severity: .veryHigh)
         
-        if !logger.session.isEmpty {
-            
-            assertion += " [\(logger.session)]"
-        }
+        // test high function
+        logger.log(message, severity: .high)
         
-        if !logger.tags.isEmpty {
-            
-            assertion += " [\(logger.tags.joined(separator: ","))]"
-        }
+        // test moderate function
+        logger.log(message, severity: .moderate)
         
-        logger.log(message, severity: severity)
+        // test low function
+        logger.log(message, severity: .low)
+        
+        // test veryLow function
+        logger.log(message, severity: .veryLow)
         //Then
         
-        XCTAssertEqual(logger.logMessage, assertion)
+        XCTAssertNotNil(logger.logMessage)
         
     }
-    
+    func testEnvironment(){
+            // Given
+        let message = "Test Log"
+        
+        logger.configure(tag: message, environment: .staging)
+        
+        logger.log(message, severity: .veryLow)
+        
+        logger.configure(tag: message, environment: .production)
+        
+        logger.log(message, severity: .veryLow)
+        
+        XCTAssertNotNil(logger.logMessage)
+    }
     // test writeToFile
     func testWriteLogToFile() {
             // Create a test log string

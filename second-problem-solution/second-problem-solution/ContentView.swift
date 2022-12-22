@@ -8,7 +8,6 @@
 import SwiftUI
 
 struct ContentView: View {
-    let userDefaults = UserDefaultsManager.shared
     
     var body: some View {
         VStack {
@@ -16,9 +15,8 @@ struct ContentView: View {
         }
         .padding()
         .onAppear(){
-            userDefaults.setValue(value: "Maxwell:1038443", forKey: "userID")
             
-            Logger.shared.configure(tag: "dedugging-logs", environment: .debugging)
+       Logger.shared.configure(tag: "dedugging-logs", environment: .debugging)
             
             Logger.shared.log("newly created logs", severity: .veryHigh)
             

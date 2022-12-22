@@ -62,27 +62,7 @@ public class Logger {
                 break
         }
     }
-    
-    func veryHigh(_ message: String){
-        log(message, severity: .veryHigh)
-    }
-    
-    func high(_ message: String){
-        log(message, severity: .high)
-    }
-    
-    func moderate(_ message: String){
-        log(message, severity: .moderate)
-    }
-    
-    func low(_ message: String){
-        log(message, severity: .low)
-    }
-    
-    func veryLow(_ message: String){
-        log(message, severity: .veryLow)
-    }
-    
+
     func dateToLog()->String{
         let formatter = DateFormatter()
         
@@ -149,7 +129,8 @@ public class Logger {
         if fileManager.fileExists(atPath: fileURL.path) {
             if let fileContents = fileManager.contents(atPath: fileURL.path) {
                 return String(data: fileContents, encoding: .utf8)
-            } else {
+            }
+            else {
                 print("Error reading contents of file at URL: \(fileURL)")
                 return nil
             }
