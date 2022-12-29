@@ -96,46 +96,61 @@ public class Logger {
     }
     
     func setEnvironment(environment: Environment) {
+        
         self.environment = environment
     }
     
     func setSession() {
+        
         self.session = dateToLog()
     }
     
     func addTag(tag: String) {
+        
         self.tags.append(tag)
     }
     
         // MARK: File Management to write to file
     func writeLogToFile(_ log: String, fileName: String) {
+        
         let fileManager = FileManager.default
+        
         let documentsURL = fileManager.urls(for: .documentDirectory, in: .userDomainMask)[0]
+        
         let fileURL = documentsURL.appendingPathComponent(fileName)
         
         do {
             try log.write(to: fileURL, atomically: true, encoding: .utf8)
+            
         } catch {
+            
             print("Error writing log to file: \(error.localizedDescription)")
         }
     }
     
         // MARK: File Management to read to file
     func readFromFile(fileName: String) -> String? {
+        
         let fileManager = FileManager.default
+        
         let documentsURL = fileManager.urls(for: .documentDirectory, in: .userDomainMask)[0]
+        
         let fileURL = documentsURL.appendingPathComponent(fileName)
         
         if fileManager.fileExists(atPath: fileURL.path) {
+            
             if let fileContents = fileManager.contents(atPath: fileURL.path) {
+                
                 return String(data: fileContents, encoding: .utf8)
             }
             else {
                 print("Error reading contents of file at URL: \(fileURL)")
+                
                 return nil
             }
         } else {
             print("File does not exist at URL: \(fileURL)")
+            
             return nil
         }
     }
