@@ -42,4 +42,30 @@ class Calculator {
         }
         return (value1 - value2)
     }
+
+    func solveQuadraticEquation(a: Double, b: Double, c: Double) -> (Double?, Double?) {
+
+        /** for ax^2 + bx + c = 0;
+         x = -b (+-) √(b^2 - 4ac)/2a
+
+         if b^2 - 4ac > 0, then √(b^2 - 4ac) is a real number, and the quadratic equation has real two solutions(roots); eg x^2 - 6x - 9 = 0; => b^2 - 4ac = 72; > 0
+
+         if b^2 - 4ac = 0, then √(b^2 - 4ac) is also 0, and the quadratic equation becomes -b/2a, which means the quaadratic equation has one real solution(root); eg. x^2 - 6x + 9 = 0; => b^2 - 4ac  = 0;
+
+         if b^2 - 4ac < 0, then √(b^2 - 4ac) is imaginary number, which means the quadratic equation has no real solutions(roots); eg. 2x^2 - 6x + 9 = 0; => b^2 - 4ac  = -36;  < 0
+         **/
+        let discriminant = b * b - 4 * a * c
+
+        if discriminant > 0 {
+            let root1 = (-b + sqrt(discriminant)) / (2 * a)
+            let root2 = (-b - sqrt(discriminant)) / (2 * a)
+            return (root1, root2)
+        } else if discriminant == 0 {
+            let root = -b / (2 * a)
+            return (root, nil)
+        } else {
+            return (nil, nil)
+        }
+    }
+
 }
