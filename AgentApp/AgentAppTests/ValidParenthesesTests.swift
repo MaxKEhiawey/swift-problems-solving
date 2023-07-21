@@ -11,15 +11,19 @@ import XCTest
 final class ValidParenthesesTests: XCTestCase {
 
     func testIsValid_ValidParentheses_ReturnsTrue() {
+
             // Arrange
         let validParentheses = ValidParentheses()
         let input = "{[()]}"
+        let input2 =  "()[]{})["
 
             // Act
         let result = validParentheses.isValid(input)
+        let result2 = validParentheses.isValid(input2)
 
             // Assert
         XCTAssertTrue(result)
+        XCTAssertFalse(result2)
     }
 
 }
