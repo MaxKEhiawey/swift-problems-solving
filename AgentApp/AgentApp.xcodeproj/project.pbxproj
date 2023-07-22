@@ -21,6 +21,8 @@
 		EBFBF74C2A6B343100099DEA /* ContainsDuplicateTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBFBF74B2A6B343100099DEA /* ContainsDuplicateTests.swift */; };
 		EBFBF74E2A6B361400099DEA /* ValidParenthesesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBFBF74D2A6B361400099DEA /* ValidParenthesesTests.swift */; };
 		EBFBF7502A6C8CB300099DEA /* PalidromeNumberTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBFBF74F2A6C8CB300099DEA /* PalidromeNumberTests.swift */; };
+		EBFBF7522A6C8EAF00099DEA /* QueueUsingStacksTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBFBF7512A6C8EAF00099DEA /* QueueUsingStacksTests.swift */; };
+		EBFBF7542A6C8EC200099DEA /* QueueUsingStacks.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBFBF7532A6C8EC200099DEA /* QueueUsingStacks.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,6 +52,8 @@
 		EBFBF74B2A6B343100099DEA /* ContainsDuplicateTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContainsDuplicateTests.swift; sourceTree = "<group>"; };
 		EBFBF74D2A6B361400099DEA /* ValidParenthesesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidParenthesesTests.swift; sourceTree = "<group>"; };
 		EBFBF74F2A6C8CB300099DEA /* PalidromeNumberTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PalidromeNumberTests.swift; sourceTree = "<group>"; };
+		EBFBF7512A6C8EAF00099DEA /* QueueUsingStacksTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QueueUsingStacksTests.swift; sourceTree = "<group>"; };
+		EBFBF7532A6C8EC200099DEA /* QueueUsingStacks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QueueUsingStacks.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,6 +120,7 @@
 				EB9F3A882A6886CB00125F2E /* ValidParentheses .swift */,
 				EB9F3A8C2A69D83500125F2E /* ContainsDuplicate .swift */,
 				EB9F3A8E2A69D8EC00125F2E /* ShuffleTheArray.swift */,
+				EBFBF7532A6C8EC200099DEA /* QueueUsingStacks.swift */,
 			);
 			path = Algorithms;
 			sourceTree = "<group>";
@@ -123,6 +128,7 @@
 		EBD42B8D2A5D6C46000E57C9 /* AgentAppTests */ = {
 			isa = PBXGroup;
 			children = (
+				EBFBF7512A6C8EAF00099DEA /* QueueUsingStacksTests.swift */,
 				EBD42B8E2A5D6C46000E57C9 /* AgentAppTests.swift */,
 				EBFBF7492A6B32F000099DEA /* ShuffleArrayTests.swift */,
 				EBFBF74B2A6B343100099DEA /* ContainsDuplicateTests.swift */,
@@ -237,6 +243,7 @@
 				EB9F3A892A6886CB00125F2E /* ValidParentheses .swift in Sources */,
 				EB8DE7882A53181C009FB842 /* AgentAppApp.swift in Sources */,
 				EBD42B962A5D7020000E57C9 /* Calculator.swift in Sources */,
+				EBFBF7542A6C8EC200099DEA /* QueueUsingStacks.swift in Sources */,
 				EB9F3A8D2A69D83500125F2E /* ContainsDuplicate .swift in Sources */,
 				EB9F3A8F2A69D8EC00125F2E /* ShuffleTheArray.swift in Sources */,
 			);
@@ -249,6 +256,7 @@
 				EBFBF74C2A6B343100099DEA /* ContainsDuplicateTests.swift in Sources */,
 				EBD42B8F2A5D6C46000E57C9 /* AgentAppTests.swift in Sources */,
 				EBFBF74A2A6B32F000099DEA /* ShuffleArrayTests.swift in Sources */,
+				EBFBF7522A6C8EAF00099DEA /* QueueUsingStacksTests.swift in Sources */,
 				EBFBF7502A6C8CB300099DEA /* PalidromeNumberTests.swift in Sources */,
 				EBFBF74E2A6B361400099DEA /* ValidParenthesesTests.swift in Sources */,
 			);
