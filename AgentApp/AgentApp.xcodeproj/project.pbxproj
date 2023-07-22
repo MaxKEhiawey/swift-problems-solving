@@ -20,6 +20,7 @@
 		EBFBF74A2A6B32F000099DEA /* ShuffleArrayTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBFBF7492A6B32F000099DEA /* ShuffleArrayTests.swift */; };
 		EBFBF74C2A6B343100099DEA /* ContainsDuplicateTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBFBF74B2A6B343100099DEA /* ContainsDuplicateTests.swift */; };
 		EBFBF74E2A6B361400099DEA /* ValidParenthesesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBFBF74D2A6B361400099DEA /* ValidParenthesesTests.swift */; };
+		EBFBF7502A6C8CB300099DEA /* PalidromeNumberTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBFBF74F2A6C8CB300099DEA /* PalidromeNumberTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +49,7 @@
 		EBFBF7492A6B32F000099DEA /* ShuffleArrayTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShuffleArrayTests.swift; sourceTree = "<group>"; };
 		EBFBF74B2A6B343100099DEA /* ContainsDuplicateTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContainsDuplicateTests.swift; sourceTree = "<group>"; };
 		EBFBF74D2A6B361400099DEA /* ValidParenthesesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidParenthesesTests.swift; sourceTree = "<group>"; };
+		EBFBF74F2A6C8CB300099DEA /* PalidromeNumberTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PalidromeNumberTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -125,6 +127,7 @@
 				EBFBF7492A6B32F000099DEA /* ShuffleArrayTests.swift */,
 				EBFBF74B2A6B343100099DEA /* ContainsDuplicateTests.swift */,
 				EBFBF74D2A6B361400099DEA /* ValidParenthesesTests.swift */,
+				EBFBF74F2A6C8CB300099DEA /* PalidromeNumberTests.swift */,
 			);
 			path = AgentAppTests;
 			sourceTree = "<group>";
@@ -246,6 +249,7 @@
 				EBFBF74C2A6B343100099DEA /* ContainsDuplicateTests.swift in Sources */,
 				EBD42B8F2A5D6C46000E57C9 /* AgentAppTests.swift in Sources */,
 				EBFBF74A2A6B32F000099DEA /* ShuffleArrayTests.swift in Sources */,
+				EBFBF7502A6C8CB300099DEA /* PalidromeNumberTests.swift in Sources */,
 				EBFBF74E2A6B361400099DEA /* ValidParenthesesTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
