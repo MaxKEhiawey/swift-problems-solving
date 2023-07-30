@@ -11,8 +11,8 @@ class QueueUsingStacks {
 
     func findAnagrams(_ s: String, _ p: String) -> [Int] {
 
-        var sChars = Array(s)
-        var pChars = Array(p)
+        let sChars = Array(s)
+        let pChars = Array(p)
         var pCount = [Character: Int]()
         var sCount = [Character: Int]()
         var result = [Int]()
